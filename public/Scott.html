@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Scott Game</title>
+
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .robby-image {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      /* HIDE these on page load */
+      #picture,
+      #returnBtn {
+        display: none;
+      }
+    </style>
+
+    <script src="../scripts/function.js"></script>
+  </head>
+
+  <body>
+    <h1>Welcome to, "Scott Gay... ?"</h1>
+   <img id="mainImage" src="../img/raph_scott.jpg" alt="scott" class="robby-image" />
+
+    <p>This is something fun to find out which button that is pushed says Scott is Gay!</p>
+    <h2>Is Scott Gay?</h2>
+
+    <audio id="sound1" src="../mp3/Ha! Gay - QuickSounds.com.mp3"></audio>
+    <audio id="sound2" src="../mp3/ultra gay - QuickSounds.com.mp3"></audio>
+
+    <div id="options">
+      <button class="btn btn-primary"
+        onclick="playSound('sound1'); showPicture('../img/kinda_gay.jpg');">
+        Try it out
+      </button>
+
+      <button class="btn btn-primary"
+        onclick="playSound('sound2'); showPicture('../img/gay_pic.jpg');">
+        Try this one
+      </button>
+    </div>
+
+    <!-- Image that appears after clicking -->
+
+    <button class="btn btn-primary" id="returnBtn" onclick="resetQuestion()">
+      Try again, fag!
+    </button>
+
+    <button class="btn btn-primary" id="menuBtn" onclick="returnToMenu()">
+      Main Menu
+    </button>
+
+  </body>
+</html>
